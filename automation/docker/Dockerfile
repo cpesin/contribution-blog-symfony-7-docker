@@ -15,6 +15,8 @@ RUN apt-get update && apt-get install -y \
     nano \
     # Used to install composer
     wget \
+    # Used with Symfony bundle
+    libzip-dev \
     # Used by composer
     zip
 
@@ -31,7 +33,9 @@ RUN docker-php-ext-install \
     # mysql driver
     pdo_mysql \
     # intl extension should be available (used for validators)
-    intl 
+    intl \
+    # Used with Symfony bundle
+    zip
 
 # Copy php.ini
 RUN cp /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini \
