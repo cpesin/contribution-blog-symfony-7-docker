@@ -17,7 +17,7 @@ services:
     container_name: blog-mysql
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-toor}
-      MYSQL_DATABASE: ${DB_DATABASE:-app}
+      MYSQL_DATABASE: ${DB_NAME:-app}
       MYSQL_USER: ${DB_USER:-user}
       MYSQL_PASSWORD: ${DB_PASSWORD:-resu}
     ports:
